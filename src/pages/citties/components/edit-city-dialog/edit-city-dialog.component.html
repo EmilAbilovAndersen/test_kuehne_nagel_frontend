@@ -1,0 +1,16 @@
+<form class="edit-city-form" [formGroup]="editForm">
+  <div class="">
+    <span class="title">Edit city</span>
+  </div>
+
+  <div class="field">
+    <span class="label">Name</span>
+    <input  matInput formControlName="name"/>
+  </div>
+  <div class="field">
+    <span class="label">Photo</span>
+    <input matInput formControlName="photo"/>
+  </div>
+
+  <button class="submit" [disabled]="editForm.invalid" mat-button color="primary" (click)="onSave()">Save</button>
+</form>

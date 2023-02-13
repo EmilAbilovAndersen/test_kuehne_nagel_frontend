@@ -1,0 +1,21 @@
+<div class="cities-container">
+  <div class="header">
+    <h1 class="title">Cities</h1>
+    <div class="pagination">
+      <img class="arrow" src="/assets/images/left-arrow.png" (click)="onPrevious()" />
+      <span class="label">{{page}}&nbsp;/&nbsp;{{totalPage}}</span>
+      <img class="arrow" src="/assets/images/right-arrow.png" (click)="onNext()" />
+
+      <select name="Page size" [(ngModel)]="pageSize" (change)="onPageSizeChanged()">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+    </div>
+    <input class="search" placeholder="Type city name..." [(ngModel)]="search" (keyup)="onSearchChange()"/>
+  </div>
+   <div class="cities">
+     <app-city *ngFor="let city of cities" [city]="city" (onEditEmitter)="onEdit($event)"></app-city>
+   </div>
+</div>

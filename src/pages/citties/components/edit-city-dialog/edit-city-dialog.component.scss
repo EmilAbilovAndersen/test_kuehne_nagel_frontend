@@ -1,0 +1,27 @@
+@import 'src/styles';
+
+.edit-city-form {
+  padding: 15px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .label {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  }
+}

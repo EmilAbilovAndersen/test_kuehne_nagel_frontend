@@ -1,0 +1,7 @@
+<div class="city-container">
+  <img class="photo" [src]="errorImage ? '/assets/images/no-image.png' : city.photoUrl" (error)="onCantLoadImage()">
+  <div class="label">
+    <span class="name">{{city.name}}</span>
+    <img class="edit" src="/assets/images/edit.png" (click)="onEdit()">
+  </div>
+</div>
